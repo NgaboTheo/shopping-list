@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Shopping List</title>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        padding: 40px;
+        }
+
+        .shopping-container {
+        background-color: #fff;
+        width: 300px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .shopping-container h2 {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        margin-bottom: 15px;
+        }
+
+        .shopping-container h2::before {
+        content: "📝";
+        margin-right: 10px;
+        }
+
+        input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        }
+
+        .add-button {
+        background-color: #000;
+        color: #fff;
+        border: none;
+        padding: 8px 10px;
+        width: 50%;
+        border-radius: 5px;
+        font-size: 14px;
+    
+        margin-bottom: 15px;
+        }
+
+        .filter-label {
+        font-size: 14px;
+        color: #888;
+        margin-bottom: 5px;
+        display: block;
+        }
+
+        .item-button {
+        background-color: #f3f3f3;
+        border: none;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+        margin-bottom: 8px;
+    
+        }
+
+        .delete-btn {
+        color: red;
+        font-size: 16px;
+        margin-left: 150px;
+        }
+
+        .clear-button {
+        width: 100%;
+        padding: 8px;
+        background-color: #eee;
+        border: none;
+        border-radius: 5px;
+        margin-top: 10px;
+        font-size: 14px;
+    
+        }
+        select{
+            width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        }
+        ul li{
+            list-style-type: none;
+        }
+
+        #items-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            border-bottom: 1px solid #ccc;
+            border-radius: 5px;
+
+        }
+        .item-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+        .item-button i {
+    color: #e61717;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+.item-button i:hover {
+    color: rgb(51, 50, 50);
+}
+
+.edit-mode{
+    color: #ccc;
+}
+    </style>
+    </head>
+    <body>
+
+    <div class="shopping-container">
+        
+        <h2>Shopping List</h2>
+        <form action="" id="item-form">
+            <input type="text" placeholder="Enter Item" id="input-item" name="item">
+        
+            
+            <button class="add-button" type="submit">+ Add Item</button>
+                
+        </form>
+        <input type="text"  class="form-input-filter" id="filter" placeholder="Filter Items">
+        <div class="list">
+
+    
+        </div> 
+        <ul id="items-list" class="items">
+        
+            <!-- <li>
+        <button class="item-button">
+        Apples <i class="fa-solid fa-trash delete-btn"></i>
+        </button></li>
+        <li>
+        <button class="item-button">
+        Orange Juice <i class="fa-solid fa-trash delete-btn"></i>
+        </button></li>
+        <li>
+        <button class="item-button">
+        Oreos <i class="fa-solid fa-trash delete-btn"></i>
+        </button></li>
+        <li>
+        <button class="item-button">
+        Milk <i class="fa-solid fa-trash delete-btn"></i>
+        </button></li> -->
+</ul>  
+
+        <button id="clear" class="clear-button">Clear All</button>
+    </div>
+
+    <script src="shopping.js"></script>
+    </body>
+    </html>
